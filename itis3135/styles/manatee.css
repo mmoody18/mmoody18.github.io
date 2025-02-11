@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 body{
     text-align: center;
-    background-image: url(/itis3135/images/sea.jpg);
+    background-image: url(../images/sea.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
