@@ -1,7 +1,8 @@
   
 #l {
     display: inline-block;
-    margin-right: 10px; /* add spacing between items */
+    margin-right: 5px; /* add spacing between items */
+    margin-left: 5px;
   }
 
   body{

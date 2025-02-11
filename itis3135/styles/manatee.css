@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    text-align: center;
+    background-image: url(/itis3135/images/sea.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    font-family: 'Lobster', cursive;
+    
+  }
+main{
+    background-color: lightblue;
+    padding: 30px;
+    padding-top: 5px;
+    border-radius: 30px;
+}
+footer{
+    color: blue;
+}
+header{
+    background-color: lightyellow;
+    padding-bottom: 1px;
+    border-radius: 30px;
+    color: rgb(255, 57, 57);
+}
+.mainTxt, p {
+    font-size: 20px;
+}
+h2{
+    font-size: 29px;
+}
+#l {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;;
+    color: crimson;
+  }
+  #l:hover {
+    background-color:skyblue ;
+  }
+  main img{
+    width: 45%;
+  }
