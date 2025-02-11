@@ -42,3 +42,7 @@ h2{
   main img{
     width: 45%;
   }
+  #tag {
+    color: red;
+    font-size: 13px;
+  }
