@@ -1,6 +1,5 @@
   
 nav li {
-    display: inline-block;
     margin-right: 5px; /* add spacing between items */
     margin-left: 5px;
   }
