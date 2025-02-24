@@ -28,4 +28,7 @@ nav li {
     text-align:center;
     font-style: italic;
  }
+li{
+   display: inline-block;
+}
  
