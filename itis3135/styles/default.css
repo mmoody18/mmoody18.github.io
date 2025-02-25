@@ -2,10 +2,16 @@
 nav li {
     margin-right: 5px; /* add spacing between items */
     margin-left: 5px;
+    display: inline-block;
+    align-self: center;
+    padding-right: 5px;
   }
 
   body{
     background-color: honeydew;
+    margin: 0 auto;
+    max-width: 1000;
+    width: 90;
   }
  nav a {
     color: darkblue;
@@ -27,8 +33,6 @@ nav li {
     text-align:center;
     font-style: italic;
  }
-li{
-   display: inline-block;
-}
+
 
  
