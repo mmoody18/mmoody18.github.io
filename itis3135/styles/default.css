@@ -8,10 +8,10 @@ nav li {
   }
 
   body{
-    background-color: honeydew;
-    margin: 0 auto;
-    max-width: 1000;
-    width: 90;
+   background-color: honeydew;
+   margin: 0 auto;
+   max-width: 1000;
+   width: 90%;
   }
  nav a {
     color: darkblue;
