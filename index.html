@@ -8,7 +8,8 @@
 				color: #046A38;
 				margin: 100;
 				padding: 10;
-				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				
 			}
 			#page-wrapper {
 				height: 100%;
@@ -37,9 +38,33 @@
 			}
 			li {
 				display: inline-block;
-				margin-right: 10px; /* add spacing between items */
+				margin-right: 10px; 
 				padding-bottom: 20px;
 			}
+			a {
+			  color: #007BFF;         
+			  text-decoration: none;
+			  transition: color 0.3s ease;
+			}
+
+			a:hover,
+			a:focus {
+  			  color: #0056b3;
+			  text-decoration: none;
+			}
+
+			a:visited {
+			  color: #6f42c1;        
+			}
+
+			a:active {
+			  color: #004085;         
+			}
+			nav ul li:not(:last-child) a::after {
+   			  content: " |";
+   			  margin-left: 5px;
+ }
+ 
 		</style>
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	</head>
@@ -60,10 +85,10 @@
 				<main>
 					<nav>
 						<ul>
-							<li><a href="https://webpages.charlotte.edu/mmoody18/">My Webpages</a></li>
-							<li><a href="https://github.com/mmoody18/mmoody18.github.io">Github Repo</a></li>
-							<li><a href="https://mmoody18.github.io/">Github.io Home</a></li>
-							<li><a href="https://mmoody18.github.io/itis3135/">ITIS 3135 Github</a></li>
+							<li><a href="https://webpages.charlotte.edu/mmoody18/">CLT Web</a></li>
+							<li><a href="https://github.com/mmoody18/mmoody18.github.io">GitHub</a></li>
+							<li><a href="https://mmoody18.github.io/">GitHub.io</a></li>
+							<li><a href="https://mmoody18.github.io/itis3135/">3135.io</a></li>
 							<li><a href="https://www.linkedin.com/in/max-moody/">LinkedIn</a></li>
 						</ul>
 					</nav> 

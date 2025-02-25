@@ -1,17 +1,16 @@
   
 nav li {
-    margin-right: 5px; /* add spacing between items */
-    margin-left: 5px;
+    margin-right: 10px; /* add spacing between items */
+    margin-left: px;
     display: inline-block;
-    align-self: center;
-    padding-right: 5px;
   }
 
   body{
    background-color: honeydew;
    margin: 0 auto;
-   max-width: 1000;
+   max-width: 900;
    width: 90%;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
  nav a {
     color: darkblue;
@@ -33,6 +32,34 @@ nav li {
     text-align:center;
     font-style: italic;
  }
-
-
+main{
+   color:rgb(81, 7, 84)
+}
+header{
+   color: rgb(6, 99, 99);
+}
+li a {
+   color: #c800ff;
+   text-decoration: none;
+   transition: color 0.3s ease;
+ }
+ 
+ li a:hover,
+ li a:focus {
+   color: #0056b3;
+   text-decoration: none;
+ }
+ 
+ li a:visited {
+   color: #470dc7;
+ }
+ 
+ li a:active {
+   color: #004085;
+ }
+ nav ul li:not(:last-child) a::after {
+   content: " |";
+   margin-left: 5px; /* Adjust the spacing as needed */
+ }
+ 
  
