@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moody Manatee ~ Tables</title>
+<style>
+  body{
+    background-color: antiquewhite;
+  }
+  h3 {
+    margin-top: 2rem;
+}
+  ol {
+   margin-left: 1.5rem; }
+  table {
+   width: 100%;
+   border-collapse:
+  collapse;
+   margin-top: 1rem;
+  }
+  th, td {
+   border: 1px solid #444; padding: 0.5rem; text-align: left; 
+  }
+  thead th { 
+   background-color: #333; color: #fff;
+  }
+  tbody tr:nth-child(odd) {
+   background-color: #f4f4f4; 
+  }
+  tbody tr:nth-child(even) {
+   background-color: #ddd; 
+  }
+  tfoot th {
+   text-align: right; 
+  }
+  main{
+   max-width: 1200px;
+   width: 90%;
+   margin: 0 auto;
+}
+  nav li {
+   margin-right: 10px;
+   margin-left: 0;
+   display: inline-block;
+}
+  p a {
+   color: red;
+   font-size: 13px;
+}
+  li a {
+   color: #c800ff;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+  li a:hover,
+  li a:focus {
+   color: #0056b3;
+   text-decoration: none;
+}
+
+  li a:visited {
+   color: #470dc7;
+}
+
+  li a:active {
+   color: #004085;
+}
+</style>
+</head>
+<body>
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+<main>
+    <h2>Tables</h2>
+
+    <h3>Employee Tabular Data</h3>
+    <ol>
+      <li>Harry Potter — Hpotter18@gmail.com — 5 years</li>
+      <li>Ron Weasely — Ron.W@yahoo.com — 12 years</li>
+      <li>Hermione Granger — HermGrange12@manatee.com — 3 years</li>
+      <li>Colin Creavy — Colin112627@gmail.com — 8 years</li>
+      <li>Fred Weasley — Fred.w@manatee.com — 15 years</li>
+      <li>George Weasley — George.w@yahoo.com — 20 years</li>
+      <li>Severus Snape — Snape1182@manatee.com — 2 years</li>
+    </ol>
+
+    <h3>Employee Data Simple Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Years of Service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Harry Potter</td><td>Hpotter18@gmail.com</td><td>5</td></tr>
+        <tr><td>Ron Weasely</td><td>Ron.W@yahoo.com</td><td>12</td></tr>
+        <tr><td>Hermione Granger</td><td>HermGrange12@manatee.com</td><td>3</td></tr>
+        <tr><td>Colin Creavy</td><td>Colin112627@gmail.com</td><td>8</td></tr>
+        <tr><td>Fred Weasley</td><td>Fred.w@manatee.com</td><td>15</td></tr>
+        <tr><td>George Weasley</td><td>George.w@yahoo.com</td><td>20</td></tr>
+        <tr><td>Severus Snape</td><td>Snape1182@manatee.com</td><td>2</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Employee Data Complex Table</h3>
+    <figure>
+      <table>
+        <caption>Employee Information</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Monthly Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2">Management</td><td>Harry Potter</td><td>Hpotter18@gmail.com</td><td>$5,000</td></tr>
+          <tr><td>Ron Weasely</td><td>Ron.W@yahoo.com</td><td>$6,000</td></tr>
+          <tr><td rowspan="2">Sales</td><td>Hermione Granger</td><td>HermGrange12@manatee.com</td><td>$4,200</td></tr>
+          <tr><td>Colin Creavy</td><td>Colin112627@gmail.com</td><td>$3,800</td></tr>
+          <tr><td rowspan="3">Development</td><td>Fred Weasley</td><td>Fred.w@manatee.com</td><td>$4,500</td></tr>
+          <tr><td>George Weasley</td><td>George.w@yahoo.com</td><td>$4,800</td></tr>
+          <tr><td>Severus Snape</td><td>Snape1182@manatee.com</td><td>$5,200</td></tr>
+          
+        </tbody>
+        <tfoot>
+          <tr><th colspan="3">Total Years of Service</th><td>65</td></tr>
+          <tr><th colspan="3">Total Monthly Salary</th><td>$33,500</td></tr>
+        </tfoot>
+      </table>
+    </figure>
+</main>
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
