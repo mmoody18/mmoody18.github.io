@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moody Manatee ~ BYO Intro</title>
+    <style>
+        :root {
+          --main-bg: #cfc4c4;
+          --form-bg: #f3c0c0;
+          --primary: #cc0000;
+          --secondary: #000000;
+          --accent: #a2aaad;
+          --text: #000000;
+          --button-hover: #990000;
+        }
+      
+        body {
+          background-color: var(--main-bg);
+          color: var(--text);
+          font-family: Arial, sans-serif;
+        }
+      
+        main {
+          max-width: 1200px;
+          width: 90%;
+          margin: 0 auto;
+        }
+      
+        h2, h3 {
+          text-align: center;
+          color: var(--primary);
+          margin-bottom: 20px;
+        }
+      
+        form {
+          background-color: var(--form-bg);
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          border: 2px solid var(--accent);
+        }
+      
+        form label {
+          display: block;
+          margin-bottom: 15px;
+          font-weight: bold;
+          color: var(--secondary);
+        }
+      
+        form input[type="text"],
+        form input[type="file"],
+        form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid var(--accent);
+          border-radius: 6px;
+          box-sizing: border-box;
+          font-size: 14px;
+        }
+      
+        form textarea {
+          resize: vertical;
+          min-height: 80px;
+        }
+      
+        #coursesSection {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      
+        #coursesList div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+      
+        .courseInput {
+          flex-grow: 1;
+          padding: 8px;
+          margin-right: 10px;
+          border: 1px solid var(--accent);
+          border-radius: 6px;
+        }
+      
+        form input[type="submit"],
+        form input[type="reset"],
+        form button {
+          background-color: var(--primary);
+          color: white;
+          padding: 10px 20px;
+          margin-top: 15px;
+          margin-right: 10px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s ease;
+        }
+      
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover,
+        form button:hover {
+          background-color: var(--button-hover);
+        }
+      
+        input[type="checkbox"] {
+          transform: scale(1.2);
+          margin-right: 8px;
+        }
+      
+        #result {
+          margin-top: 30px;
+          padding: 20px;
+          background-color: #fff5f5;
+          border-radius: 10px;
+          border: 2px solid var(--primary);
+          color: var(--secondary);
+        }
+      
+        /* 🧭 Your original untouched styles below */
+        nav li {
+          margin-right: 10px;
+          margin-left: 0;
+          display: inline-block;
+        }
+      
+        p a {
+          color: red;
+          font-size: 13px;
+        }
+      
+        li a {
+          color: #c800ff;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+      
+        li a:hover,
+        li a:focus {
+          color: #0056b3;
+          text-decoration: none;
+        }
+      
+        li a:visited {
+          color: #470dc7;
+        }
+      
+        li a:active {
+          color: #004085;
+        }
+      </style>
+      
+      
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+    <h2>BYO Intro</h2>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+    <form id="introForm">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Mascot: <input type="text" name="mascot" required></label><br>
+        <label>Upload Image: <input type="file" name="image" accept=".png, .jpg, .jpeg" required></label><br>
+        <label>Image Caption: <input type="text" name="imageCaption" required></label><br>
+        <label>Personal Background: <textarea name="personalBackground" required></textarea></label><br>
+        <label>Professional Background: <textarea name="professionalBackground" required></textarea></label><br>
+        <label>Academic Background: <textarea name="academicBackground" required></textarea></label><br>
+        <label>Background in Web Dev: <textarea name="webDevBackground" required></textarea></label><br>
+        <label>Primary Computer Platform: <input type="text" name="platform" required></label><br>
+
+        <div id="coursesSection">
+            <label>Courses Currently Taking:</label>
+            <div id="coursesList"></div>
+            <button type="button" onclick="addCourse()">Add Course</button>
+        </div><br>
+
+        <label>Funny Thing? <textarea name="funnyThing"></textarea></label><br>
+        <label>Anything Else? <textarea name="anythingElse"></textarea></label><br>
+
+        <label>
+            <input type="checkbox" name="agreement" required>
+            I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+        </label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <script src="scripts/survey.js"></script>
+    <div id="result"></div>
+</main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
