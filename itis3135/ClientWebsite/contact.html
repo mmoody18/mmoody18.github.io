@@ -24,20 +24,34 @@
   <main class="welcome">
     <h2>Contact Me</h2>
     <p>If you’re interested in booking a session, requesting prints, or just have a question, feel free to reach out!</p>
-
-    <form style="max-width: 600px; margin: 2rem auto; text-align: left;">
-      <label for="name" style="font-size: 1.4rem;">Name:</label><br>
-      <input type="text" id="name" name="name" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem;"><br>
-
-      <label for="email" style="font-size: 1.4rem;">Email:</label><br>
-      <input type="email" id="email" name="email" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem;"><br>
-
-      <label for="message" style="font-size: 1.4rem;">Message:</label><br>
-      <textarea id="message" name="message" rows="6" style="width: 100%; padding: 0.8rem;"></textarea><br><br>
-
-      <button type="submit" style="padding: 1rem 2rem; font-size: 1.2rem; background-color: #2e8b57; color: white; border: none; border-radius: 6px;">Send Message</button>
-    </form>
+  
+    <div class="contact-container">
+      <div class="contact-image">
+        <img src="images/javon-camera.jpg" alt="Javon holding a camera">
+      </div>
+      <form class="contact-form">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" placeholder="Your Name...">
+  
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address...">
+  
+        <label for="phone">Phone Number *</label>
+        <input type="text" id="phone" name="phone" placeholder="Your Message...">
+  
+        <label for="session">What do you need captured? *</label>
+        <input type="text" id="session" name="session" placeholder="Wedding, couple session, grad shoot, etc.">
+  
+        <label for="details">Any other details?</label>
+        <textarea id="details" name="details" placeholder="Date, budget, favorite color, etc."></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </main>
+  
+  
+  
 
   <footer>
     <p>&copy; 2025 Javon Bennet Photography. All rights reserved.</p>

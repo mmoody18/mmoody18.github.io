@@ -21,20 +21,97 @@
     </nav>
   </header>
 
+  
   <main class="welcome">
     <h2>Gallery</h2>
-    <p>Here is a collection of moments captured through Javon's lens. From serene landscapes to joyful celebrations, each image tells a story.</p>
-
+    <p>Explore a preview of Javon's work through this image collection. Real images coming soon.</p>
+  
     <div class="sample-photos">
-      <img src="images/gallery1.jpg" alt="Gallery Image 1">
-      <img src="images/gallery2.jpg" alt="Gallery Image 2">
-      <img src="images/gallery3.jpg" alt="Gallery Image 3">
-      <img src="images/gallery4.jpg" alt="Gallery Image 4">
-      <img src="images/gallery5.jpg" alt="Gallery Image 5">
-      <img src="images/gallery6.jpg" alt="Gallery Image 6">
+      <!-- 32 actual image file placeholders -->
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <img src="images/photo4.jpg" alt="Photo 4">
+      <img src="images/photo5.jpg" alt="Photo 5">
+      <img src="images/photo6.jpg" alt="Photo 6">
+      <img src="images/photo7.jpg" alt="Photo 7">
+      <img src="images/photo8.jpg" alt="Photo 8">
+      <img src="images/photo9.jpg" alt="Photo 9">
+      <img src="images/photo10.jpg" alt="Photo 10">
+      <img src="images/photo11.jpg" alt="Photo 11">
+      <img src="images/photo12.jpg" alt="Photo 12">
+      <img src="images/photo13.jpg" alt="Photo 13">
+      <img src="images/photo14.jpg" alt="Photo 14">
+      <img src="images/photo15.jpg" alt="Photo 15">
+      <img src="images/photo16.jpg" alt="Photo 16">
+      <img src="images/photo17.jpg" alt="Photo 17">
+      <img src="images/photo18.jpg" alt="Photo 18">
+      <img src="images/photo19.jpg" alt="Photo 19">
+      <img src="images/photo20.jpg" alt="Photo 20">
+      <img src="images/photo21.jpg" alt="Photo 21">
+      <img src="images/photo22.jpg" alt="Photo 22">
+      <img src="images/photo23.jpg" alt="Photo 23">
+      <img src="images/photo24.jpg" alt="Photo 24">
+      <img src="images/photo25.jpg" alt="Photo 25">
+      <img src="images/photo26.jpg" alt="Photo 26">
+      <img src="images/photo27.jpg" alt="Photo 27">
+      <img src="images/photo28.jpg" alt="Photo 28">
+      <img src="images/photo29.jpg" alt="Photo 29">
+      <img src="images/photo30.jpg" alt="Photo 30">
+      <img src="images/photo31.jpeg" alt="Photo 31">
+      <img src="images/photo32.jpg" alt="Photo 32">
+      <img src="images/photo33.jpg" alt="Photo 33">
+    </div>
+  
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <span class="nav left">&#10094;</span>
+      <img class="lightbox-content" id="lightbox-img">
+      <span class="nav right">&#10095;</span>
     </div>
   </main>
-
+  
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+    const images = Array.from(document.querySelectorAll('.sample-photos img'));
+    const leftArrow = document.querySelector('.lightbox .nav.left');
+    const rightArrow = document.querySelector('.lightbox .nav.right');
+  
+    let currentIndex = 0;
+  
+    function showImage(index) {
+      lightboxImg.src = images[index].src;
+      currentIndex = index;
+      lightbox.style.display = 'flex';
+    }
+  
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => showImage(index));
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  
+    rightArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+  
+    leftArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+  </script>
+  
   <footer>
     <p>&copy; 2025 Javon Bennet Photography. All rights reserved.</p>
   </footer>
