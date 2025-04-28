@@ -69,6 +69,7 @@
       <img class="lightbox-content" id="lightbox-img">
       <span class="nav right">&#10095;</span>
     </div>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Back to Top</button>
   </main>
   
   <script>
@@ -110,8 +111,23 @@
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(currentIndex);
     });
+       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+     scrollToTopBtn.style.display = "none";
+    }
+    };
+
+    function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    }
   </script>
-  
+
   <footer>
     <p>&copy; 2025 Javon Bennett Photography. All rights reserved.</p>
   </footer>
