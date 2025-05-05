@@ -6,6 +6,13 @@
   <title>Contact Me - Javon Bennett Photography</title>
   <link rel="stylesheet" href="./styles/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Epoca&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+  </script>
 </head>
 <body>
   <header>
@@ -24,37 +31,55 @@
   <main class="welcome">
     <h2>Contact Me</h2>
     <p>If you’re interested in booking a session, requesting prints, or just have a question, feel free to reach out!</p>
-  
+
     <div class="contact-container">
       <div class="contact-image">
         <img src="images/javon-camera.jpg" alt="Javon holding a camera">
       </div>
-      <form class="contact-form">
+      <form class="contact-form" id="contact-form">
         <label for="name">Name *</label>
-        <input type="text" id="name" name="name" placeholder="Your Name...">
-  
+        <input type="text" id="name" name="name" placeholder="Your Name..." required>
+
         <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" placeholder="Your Email Address...">
-  
+        <input type="email" id="email" name="email" placeholder="Your Email Address..." required>
+
         <label for="phone">Phone Number *</label>
-        <input type="text" id="phone" name="phone" placeholder="Your Message...">
-  
+        <input type="text" id="phone" name="phone" placeholder="Your Phone Number..." required>
+
         <label for="session">What do you need captured? *</label>
-        <input type="text" id="session" name="session" placeholder="Wedding, couple session, grad shoot, etc.">
-  
+        <input type="text" id="session" name="session" placeholder="Wedding, couple session, grad shoot, etc." required>
+
         <label for="details">Any other details?</label>
         <textarea id="details" name="details" placeholder="Date, budget, favorite color, etc."></textarea>
-  
+
         <button type="submit">Submit</button>
       </form>
     </div>
   </main>
-  
-  
-  
 
   <footer>
     <p>&copy; 2025 Javon Bennett Photography. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        session: document.getElementById("session").value,
+        details: document.getElementById("details").value
+      })
+      .then(function(response) {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+    });
+  </script>
 </body>
 </html>
